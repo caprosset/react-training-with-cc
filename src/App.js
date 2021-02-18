@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import FilterableProductTable from './components/FilterableProductTable/FilterableProductTable';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      {/* Products are located in the data object in the json file. */}
+      {/* To access the array of products we need to do importName.data */}
+      {/* In this case the importName is "data"  */}
+      <FilterableProductTable />
     </div>
   );
-}
+};
 
 export default App;
